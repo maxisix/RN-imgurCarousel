@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-
-import { toJS } from "mobx";
 import { inject, observer } from "mobx-react/native";
 
 import Spinner from "./Spinner";
 import TouchableImage from "./TouchableImage";
 import Album from "./Album";
-import styles from "./styles";
 
 @inject("store")
 @observer

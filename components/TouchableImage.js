@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  ImageBackground,
-  TouchableHighlight,
-  ListView
-} from "react-native";
-
+import { Text, ImageBackground, TouchableHighlight } from "react-native";
 import { inject, observer } from "mobx-react/native";
 
 import styles from "./styles";
@@ -32,13 +24,13 @@ class TouchableImage extends Component {
     }
   }
 
-  onPressIn(event) {
+  onPressIn() {
     this.setState({
       hideCaption: true
     });
   }
 
-  onPressOut(event) {
+  onPressOut() {
     this.setState({
       hideCaption: false
     });

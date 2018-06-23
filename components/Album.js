@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { View, Text, ListView } from "react-native";
-
 import { toJS } from "mobx";
 import { inject, observer } from "mobx-react/native";
 
@@ -24,10 +23,9 @@ class Album extends Component {
   }
 
   get dataSource() {
-    const { store, albumID } = this.props,
-      ds = new ListView.DataSource({
-        rowHasChanged: (r1, r2) => r1.id !== r2.id
-      });
+    const ds = new ListView.DataSource({
+      rowHasChanged: (r1, r2) => r1.id !== r2.id
+    });
 
     return ds.cloneWithRows(toJS(this.album.images));
   }

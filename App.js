@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Provider, observer } from "mobx-react/native";
+import { StyleSheet, View } from "react-native";
+import { Provider } from "mobx-react/native";
 
 import ImgurCarousel from "./components/ImgurCarousel";
 import { LANDSCAPE, PORTRAIT } from "./Constants";
